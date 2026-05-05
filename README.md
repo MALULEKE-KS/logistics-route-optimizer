@@ -123,7 +123,6 @@ text
 
 ### Installation
 
-```bash
 # Clone the repository
 git clone https://github.com/MALULEKE-KS/logistics-route-optimizer.git
 cd logistics-route-optimizer
