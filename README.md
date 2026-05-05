@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=0,2,2,5,30&height=200&section=header&text=Logistics%20Route%20Optimizer&fontSize=42&fontColor=white&fontAlignY=42&fontAlign=50&desc=A*%20Search%20Engine%20for%20Last-Mile%20Logistics&descAlignY=62&descAlign=50&descSize=18&animation=fadeIn" alt="Header" />
 </p>
@@ -66,41 +65,43 @@ Where most route planners use basic shortest-path algorithms, this system reason
 ## How It Works
 
 ### The A* Search Algorithm
+
+```
 f(n) = g(n) + h(n)
 
 Where:
-g(n) = Actual distance traveled from start to node n
-h(n) = Traffic factor heuristic (estimated cost to goal)
-f(n) = Estimated total cost through node n
-
-text
+  g(n) = Actual distance traveled from start to node n
+  h(n) = Traffic factor heuristic (estimated cost to goal)
+  f(n) = Estimated total cost through node n
+```
 
 ### Network Topology
-┌──────────┐
-│ Zeerust │
-└────┬─────┘
-│
-┌──────────┴──────────┐
-│ Groot Marico │
-└─────────────────────┘
-│
-┌──────────┐ ┌───┴────┐ ┌──────────┐
-│ Mmabatho │────│ Slurry │────│Bakerville│
-└────┬─────┘ └───┬────┘ └────┬─────┘
-│ │ │
-┌────┴─────┐ ┌────┴─────┐ ┌───┴────────┐
-│ Mahikeng │───│ Disaneng │ │Lichtenburg │
-└────┬─────┘ └────┬─────┘ └────┬───────┘
-│ │ │
-┌────┴─────┐ ┌────┴─────┐ ┌───┴──────┐
-│ Madibogo │───│Sannieshof│ │ Coligny │
-└──────────┘ └────┬─────┘ └──────────┘
-│
-┌────┴────────┐
-│Delareyville │
-└─────────────┘
 
-text
+```
+                    ┌──────────┐
+                    │  Zeerust │
+                    └────┬─────┘
+                         │
+              ┌──────────┴──────────┐
+              │     Groot Marico    │
+              └─────────────────────┘
+                         │
+    ┌──────────┐    ┌───┴────┐    ┌──────────┐
+    │ Mmabatho │────│ Slurry │────│Bakerville│
+    └────┬─────┘    └───┬────┘    └────┬─────┘
+         │              │              │
+    ┌────┴─────┐   ┌────┴─────┐   ┌───┴────────┐
+    │ Mahikeng │───│ Disaneng │   │Lichtenburg │
+    └────┬─────┘   └────┬─────┘   └────┬───────┘
+         │              │              │
+    ┌────┴─────┐   ┌────┴─────┐   ┌───┴──────┐
+    │ Madibogo │───│Sannieshof│   │ Coligny  │
+    └──────────┘   └────┬─────┘   └──────────┘
+                        │
+                   ┌────┴────────┐
+                   │Delareyville │
+                   └─────────────┘
+```
 
 ### Traffic Heuristics (to Coligny)
 
@@ -119,6 +120,7 @@ text
 ## Quick Start
 
 ### Prerequisites
+
 - Python 3.8 or higher
 - Git (for cloning)
 
@@ -131,8 +133,11 @@ cd logistics-route-optimizer
 
 # Run the route optimizer
 python A_star_search.py
-Expected Output
-text
+```
+
+### Expected Output
+
+```
 ==================================================
 TRUCK LOGISTICS - A* SEARCH ROUTE OPTIMIZATION
 ==================================================
@@ -155,20 +160,33 @@ Total Distance: 110 km
 
 🎯 Destination Reached!
 ==================================================
-Verification
+```
+
+---
+
+## Verification
+
 Run the verification script to manually confirm the optimal path:
 
-bash
+```bash
 python verify.py
-Manual Distance Calculation
-Segment	Distance
-Disaneng → Mahikeng	25 km
-Mahikeng → Bakerville	35 km
-Bakerville → Lichtenburg	20 km
-Lichtenburg → Coligny	30 km
-Total	110 km ✅
-Project Structure
-text
+```
+
+### Manual Distance Calculation
+
+| Segment | Distance |
+| :--- | :---: |
+| Disaneng → Mahikeng | 25 km |
+| Mahikeng → Bakerville | 35 km |
+| Bakerville → Lichtenburg | 20 km |
+| Lichtenburg → Coligny | 30 km |
+| **Total** | **110 km** ✅ |
+
+---
+
+## Project Structure
+
+```
 logistics-route-optimizer/
 │
 ├── A_star_search.py           # Main A* search implementation
@@ -177,38 +195,69 @@ logistics-route-optimizer/
 ├── verification_output.png    # Program output screenshot
 ├── verify.PNG                 # Verification screenshot
 └── README.md                  # Project documentation
-Technical Details
-Property	Value
-Algorithm	A* Search (Informed Search)
-Data Structure	Priority Queue (heapq)
-Graph Type	Weighted Undirected
-Heuristic	Traffic-based (Admissible)
-Nodes	13 Distribution Hubs
-Edges	17 Routes
-Time Complexity	O(b^d)
-Space Complexity	O(b^d)
-Optimality	Guaranteed
-Engineering Philosophy
-Principle	Application
-Informed Search	Traffic heuristics guide exploration
-Optimality	A* guarantees shortest path
-Modularity	Separate graph, weights, and heuristics
-Verification	Manual calculation confirms results
-Real-world Application	Practical logistics route planning
-What I Can Build
+```
+
+---
+
+## Technical Details
+
+| Property | Value |
+| :--- | :--- |
+| **Algorithm** | A* Search (Informed Search) |
+| **Data Structure** | Priority Queue (heapq) |
+| **Graph Type** | Weighted Undirected |
+| **Heuristic** | Traffic-based (Admissible) |
+| **Nodes** | 13 Distribution Hubs |
+| **Edges** | 17 Routes |
+| **Time Complexity** | O(b^d) |
+| **Space Complexity** | O(b^d) |
+| **Optimality** | Guaranteed |
+
+---
+
+## Engineering Philosophy
+
+| Principle | Application |
+| :--- | :--- |
+| **Informed Search** | Traffic heuristics guide exploration |
+| **Optimality** | A* guarantees shortest path |
+| **Modularity** | Separate graph, weights, and heuristics |
+| **Verification** | Manual calculation confirms results |
+| **Real-world Application** | Practical logistics route planning |
+
+---
+
+## What I Can Build
+
 This project demonstrates foundational AI skills applicable to:
 
-Industry	Applications
-Logistics	Route optimization, fleet management, delivery scheduling
-Transportation	Traffic navigation, public transit routing
-AI & ML	Search algorithms, heuristic design, optimization problems
-Supply Chain	Warehouse routing, distribution planning
-Game Development	Pathfinding, NPC movement
-Robotics	Navigation, obstacle avoidance
-Connect With Me
-Portfolio	my-nextjs-portfolio.vercel.app
-Email	kurhula04s@gmail.com
-WhatsApp	wa.me/27640708649
-LinkedIn	linkedin.com/in/kurhula-success-maluleke
-GitHub	github.com/MALULEKE-KS
-<p align="center"> <em>Built with precision — KSDRILL-SA</em> </p><p align="center"> <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=0,2,2,5,30&height=100&section=footer" alt="Footer wave" /> </p>
+| Industry | Applications |
+| :--- | :--- |
+| **Logistics** | Route optimization, fleet management, delivery scheduling |
+| **Transportation** | Traffic navigation, public transit routing |
+| **AI & ML** | Search algorithms, heuristic design, optimization problems |
+| **Supply Chain** | Warehouse routing, distribution planning |
+| **Game Development** | Pathfinding, NPC movement |
+| **Robotics** | Navigation, obstacle avoidance |
+
+---
+
+## Connect With Me
+
+| | |
+| :--- | :--- |
+| **Portfolio** | [my-nextjs-portfolio.vercel.app](https://my-nextjs-portfolio.vercel.app) |
+| **Email** | [kurhula04s@gmail.com](mailto:kurhula04s@gmail.com) |
+| **WhatsApp** | [wa.me/27640708649](https://wa.me/27640708649) |
+| **LinkedIn** | [linkedin.com/in/kurhula-success-maluleke](https://za.linkedin.com/in/kurhula-success-maluleke-32153231a) |
+| **GitHub** | [github.com/MALULEKE-KS](https://github.com/MALULEKE-KS) |
+
+---
+
+<p align="center">
+  <em>Built with precision — KSDRILL-SA</em>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=0,2,2,5,30&height=100&section=footer" alt="Footer wave" />
+</p>
