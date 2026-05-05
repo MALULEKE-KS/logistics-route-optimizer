@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=0,2,2,5,30&height=200&section=header&text=Logistics%20Route%20Optimizer&fontSize=42&fontColor=white&fontAlignY=42&fontAlign=50&desc=A*%20Search%20Engine%20for%20Last-Mile%20Logistics&descAlignY=62&descAlign=50&descSize=18&animation=fadeIn" alt="Header" />
 </p>
@@ -123,6 +124,7 @@ text
 
 ### Installation
 
+```bash
 # Clone the repository
 git clone https://github.com/MALULEKE-KS/logistics-route-optimizer.git
 cd logistics-route-optimizer
@@ -209,4 +211,4 @@ Email	kurhula04s@gmail.com
 WhatsApp	wa.me/27640708649
 LinkedIn	linkedin.com/in/kurhula-success-maluleke
 GitHub	github.com/MALULEKE-KS
-<p align="center"> <em>Built with precision — KSDRILL-SA</em> </p><p align="center"> <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=0,2,2,5,30&height=100&section=footer" alt="Footer wave" /> </p> 
+<p align="center"> <em>Built with precision — KSDRILL-SA</em> </p><p align="center"> <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=0,2,2,5,30&height=100&section=footer" alt="Footer wave" /> </p>
