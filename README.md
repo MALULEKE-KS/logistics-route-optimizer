@@ -246,7 +246,6 @@ This project demonstrates foundational AI skills applicable to:
 
 | | |
 | :--- | :--- |
-| **Portfolio** | [my-nextjs-portfolio.vercel.app](https://my-nextjs-portfolio.vercel.app) |
 | **Email** | [kurhula04s@gmail.com](mailto:kurhula04s@gmail.com) |
 | **WhatsApp** | [wa.me/27640708649](https://wa.me/27640708649) |
 | **LinkedIn** | [linkedin.com/in/kurhula-success-maluleke](https://za.linkedin.com/in/kurhula-success-maluleke-32153231a) |
