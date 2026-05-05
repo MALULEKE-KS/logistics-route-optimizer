@@ -54,8 +54,6 @@ Where most route planners use basic shortest-path algorithms, this system reason
 | | |
 | :--- | :--- |
 | **Project** | Truck Logistics Route Optimizer — A* Search |
-| **Module** | CMPG 313 — Artificial Intelligence |
-| **Institution** | North-West University |
 | **Built by** | [Maluleke Kurhula Success](https://github.com/MALULEKE-KS) |
 | **Based in** | South Africa |
 | **Core Tech** | Python · A* Algorithm · Graph Theory · Heuristics |
@@ -254,7 +252,7 @@ This project demonstrates foundational AI skills applicable to:
 ---
 
 <p align="center">
-  <em>Built with precision — KSDRILL-SA</em>
+  <em>Built with precision — MALULEKE-KS</em>
 </p>
 
 <p align="center">
